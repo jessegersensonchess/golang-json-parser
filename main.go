@@ -1,3 +1,4 @@
+// example of using golang for json API processing
 package main
 
 import (
@@ -81,7 +82,6 @@ func numDevices(statusQuery string, threshold int32, dateStr string) (totalNumbe
 	// 'nextMonth' == the month's upper bound
 	nextMonth := t.AddDate(0, 1, 0)
 	max := nextMonth.Unix() * 1000
-	fmt.Println(max, min)
 
 	counter := 0
 	page := 1
@@ -111,6 +111,6 @@ func numDevices(statusQuery string, threshold int32, dateStr string) (totalNumbe
 }
 
 func main() {
-	fmt.Println(numDevices("STOPPED", int32(4), "07-2019"))
+	fmt.Println(numDevices("STOPPED", int32(45), "04-2019"))
 
 }
